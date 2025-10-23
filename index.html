@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>To-Do অ্যাপ</title>
+<!-- Link to external CSS file -->
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <!-- Main container for the app -->
+  <div class="container">
+    <!-- App Header -->
+    <h1>দৈনন্দিন কাজের তালিকা 📝</h1>
+
+    <!-- ------------------------- -->
+    <!-- Task Input Toolbar -->
+    <!-- ------------------------- -->
+    <div class="toolbar">
+      <!-- Input field for new task -->
+      <input id="taskInput" type="text" placeholder="নতুন কাজ লিখুন..." />
+      
+      <!-- Priority selection -->
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <!-- Due date and time inputs -->
+      <input id="dueDate" type="date" />
+      <input id="dueTime" type="time" />
+
+      <!-- Button to add a new task -->
+      <button id="addBtn">➕ যোগ করুন</button>
+    </div>
+
+    <!-- ------------------------- -->
+    <!-- Search & Filter Toolbar -->
+    <!-- ------------------------- -->
+    <div class="toolbar">
+      <!-- Search input -->
+      <input id="searchBox" type="text" placeholder="খুঁজুন..." />
+
+      <!-- Filter buttons -->
+      <button id="filterAll">সব</button>
+      <button id="filterActive">বাকি</button>
+      <button id="filterCompleted">সম্পন্ন</button>
+      <button id="filterOverdue">অতীতকালীন</button>
+    </div>
+
+    <!-- ------------------------- -->
+    <!-- Action Toolbar -->
+    <!-- ------------------------- -->
+    <div class="toolbar">
+      <!-- Buttons for clearing tasks, exporting, and toggling theme -->
+      <button id="clearCompleted">✅ সম্পন্ন মুছুন</button>
+      <button id="clearAll">🗑️ সব মুছুন</button>
+      <button id="exportCSV">📄 এক্সপোর্ট</button>
+      <button id="themeToggle">🌙 থিম</button>
+    </div>
+
+    <!-- ------------------------- -->
+    <!-- Task List Container -->
+    <!-- ------------------------- -->
+    <div id="taskList"></div>
+  </div>
+
+  <!-- Link to external JavaScript file -->
+  <script src="JS/custom.js"></script>
+</body>
+</html>

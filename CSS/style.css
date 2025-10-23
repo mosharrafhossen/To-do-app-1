@@ -1,0 +1,109 @@
+/* ------------------------- */
+/* Root Variables for colors and theme */
+/* ------------------------- */
+:root {
+  --bg: #ffffff; /* Default background color */
+  --text: #222;   /* Default text color */
+  --card: #f2f2f2; /* Card/container background */
+  --accent: #007bff; /* Accent color for buttons */
+}
+
+/* Dark mode color variables */
+.dark {
+  --bg: #1c1c1c;
+  --text: #eaeaea;
+  --card: #333;
+  --accent: #0d6efd;
+}
+
+/* ------------------------- */
+/* Body Styling */
+/* ------------------------- */
+body {
+  font-family: Arial, sans-serif; /* Set font */
+  background-color: var(--bg); /* Use root or dark mode bg */
+  color: var(--text); /* Use root or dark mode text */
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+/* ------------------------- */
+/* Container for app content */
+/* ------------------------- */
+.container {
+  max-width: 600px; /* Limit width */
+  margin: auto; /* Center horizontally */
+  background: var(--card); /* Card background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+/* Header styling */
+h1 { text-align: center; }
+
+/* ------------------------- */
+/* Input, select, button styling */
+/* ------------------------- */
+input, select, button {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+  cursor: pointer; /* Pointer cursor */
+  background: var(--accent); /* Accent color */
+  color: white;
+  border: none;
+}
+
+/* ------------------------- */
+/* Task styling */
+/* ------------------------- */
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+.overdue { background: #ffdddd; } /* Overdue task highlight */
+.high { border-left: 5px solid red; } /* High priority */
+.medium { border-left: 5px solid orange; } /* Medium priority */
+.low { border-left: 5px solid green; } /* Low priority */
+.completed { text-decoration: line-through; opacity: 0.6; } /* Completed task */
+
+/* ------------------------- */
+/* Toolbar styling */
+/* ------------------------- */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.toolbar input, .toolbar select, .toolbar button {
+  flex: 1 1 auto; /* Flexible width */
+  min-width: 80px; /* Minimum width */
+}
+
+/* Task list container spacing */
+#taskList { margin-top: 15px; }
+
+/* ------------------------- */
+/* Mobile Responsive Styling */
+/* ------------------------- */
+@media (max-width: 480px) {
+  .toolbar { flex-direction: column; } /* Stack toolbar items */
+  input, select, button { width: 100%; } /* Full width on small screens */
+  .task span { display: block; margin-top: 5px; } /* Stack task text */
+  .task div { margin-top: 5px; } /* Stack buttons */
+}
+
